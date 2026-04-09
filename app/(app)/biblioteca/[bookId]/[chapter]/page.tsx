@@ -19,7 +19,7 @@ export default function ChapterDetailPage() {
 
   if (!book) return <div className="text-center py-10 text-brand-800/40">Cargando...</div>;
 
-  const data = chapters[chNum] || {} as any;
+  const data: Record<string, any> = chapters[chNum] || {};
 
   const handleField = (field: string, value: string) => {
     setSaving(true);
