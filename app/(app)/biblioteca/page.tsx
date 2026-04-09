@@ -16,7 +16,7 @@ export default function BibliotecaPage() {
     if (!books.length) return;
     supabase
       .from("chapter_progress")
-      .select("book_id")
+      .select("book_id, is_read")
       .eq("is_read", true)
       .then(({ data }) => {
         const counts: Record<number, number> = {};
